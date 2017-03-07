@@ -28,13 +28,6 @@ public class MenuTest {
     }
 
     @Test
-    public void shouldPrintListOptionWhenChoosingOptions() throws IOException {
-        noOptionChosen();
-        menu.chooseOption();
-        verify(printStream).println(contains("List Books"));
-    }
-
-    @Test
     public void shouldPrintQuitOptionWhenChoosingOptions() throws IOException {
         noOptionChosen();
         menu.chooseOption();

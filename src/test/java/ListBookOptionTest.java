@@ -12,7 +12,7 @@ import static org.mockito.Mockito.verify;
 public class ListBookOptionTest {
 
     @Test
-    public void shouldCallListBooksWhenExecuted() throws IOException {
+    public void shouldCallLiwstBooksWhenExecuted() throws IOException {
         Biblioteca biblioteca = mock(Biblioteca.class);
         ListBookOption option  = new ListBookOption("", biblioteca);
         option.execute();

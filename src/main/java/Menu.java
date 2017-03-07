@@ -30,7 +30,7 @@ public class Menu {
 
     private void performValidOption(String option) {
         if (keyToOption.containsKey(option)) {
-            keyToOption.get(option).execute();
+                keyToOption.get(option).execute();
         } else if (!option.equals("q")){
             out.println("Select a valid option!");
         }

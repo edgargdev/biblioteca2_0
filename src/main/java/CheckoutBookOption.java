@@ -11,7 +11,8 @@ public class CheckoutBookOption implements Option {
     }
 
     public void execute() {
-        biblioteca.checkOutBook(1);
+        biblioteca.listBooks();
+        biblioteca.checkOutBook();
     }
 
     public String getName() {

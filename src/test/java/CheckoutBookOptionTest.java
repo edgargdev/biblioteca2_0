@@ -4,9 +4,6 @@ import org.junit.Test;
 import java.io.BufferedReader;
 import java.io.IOException;
 
-import static org.junit.Assert.*;
-import static org.mockito.ArgumentMatchers.anyInt;
-import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -33,7 +30,21 @@ public class CheckoutBookOptionTest {
 
         checkoutBookOption.execute();
 
-        verify(biblioteca).checkOutBook(anyInt());
+        verify(biblioteca).checkOutBook();
     }
 
+    @Test
+    public void shouldDisplayListOfBooksWhenCheckingOut() throws IOException {
+        checkoutBookOption.execute();
+
+        verify(biblioteca).listBooks();
+    }
+//    @Test
+//    public void shouldCheckoutTheSecondBookWhenUserSelectsTwo() throws IOException {
+//        when(bufferedReader.readLine()).thenReturn("2");
+//
+//        checkoutBookOption.execute();
+//
+//        verify(biblioteca).listBooks();
+//    }
 }
